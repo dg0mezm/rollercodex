@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rollercodex/static/css/main.8fa15f3d.css",
+    "main.js": "/rollercodex/static/js/main.64ae9eda.js",
+    "static/js/787.145916f0.chunk.js": "/rollercodex/static/js/787.145916f0.chunk.js",
+    "index.html": "/rollercodex/index.html",
+    "main.8fa15f3d.css.map": "/rollercodex/static/css/main.8fa15f3d.css.map",
+    "main.64ae9eda.js.map": "/rollercodex/static/js/main.64ae9eda.js.map",
+    "787.145916f0.chunk.js.map": "/rollercodex/static/js/787.145916f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fa15f3d.css",
+    "static/js/main.64ae9eda.js"
+  ]
+}
