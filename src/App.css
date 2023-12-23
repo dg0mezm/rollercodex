@@ -23,3 +23,12 @@
 .Footer {
   height: 60px;
 }
+
+@media (max-width: 500px) {
+  .Header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-content: center;
+  }
+}
