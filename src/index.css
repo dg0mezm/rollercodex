@@ -5,9 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #181928;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@font-face {
+  font-family: "Arcana";
+  src: local('ArcanaRegular'), url('./static/fonts/ArcanaRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local('Roboto'), url('./static/fonts/Roboto.woff') format('woff');
 }

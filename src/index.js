@@ -1,13 +1,58 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Miners from './pages/Miners';
+import Home from './pages/Home';
+import Users from './pages/Users';
+import HowToUse from './pages/HowToUse';
+import Faq from './pages/Faq';
+import Rgpd from './pages/Rgpd';
+import Calculator from './pages/Calculator';
+import Contact from './pages/Contact';
+import './index.css';
+import './static/fonts/ArcanaRegular.woff'
+import './static/fonts/Roboto.woff'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/miners",
+    element: <Miners />,
+  },
+  {
+    path: "/users",
+    element: <Users />,
+  },
+  {
+    path: "/how-to-use",
+    element: <HowToUse />,
+  },
+  {
+    path: "/faq",
+    element: <Faq />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "/calculator",
+    element: <Calculator />,
+  },
+  {
+    path: "/rgpd",
+    element: <Rgpd />,
+  },
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

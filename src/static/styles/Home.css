@@ -1,0 +1,13 @@
+.HomeContainer {
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    padding: 40px 0px;
+    text-align: left;
+
+}
+
+.HomeContainer a {
+    color: #03e1e4;
+    text-decoration: none;
+}

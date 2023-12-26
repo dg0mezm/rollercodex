@@ -1,13 +1,30 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
+.Header {  
+  background-color: #2F3045;
+}
+
+.Footer {
+  background-color: #2F3045;
+}
+
+.Header .navbar .nav-elements a {
+  color: #fff !important;
+}
+
 .Header, .Footer {
   display: flex;
+  flex-direction: column;
   align-content: center;
 }
 
-.Header div, .Footer div {
+.Miners .Main, .Footer div {
   width: 100%;
   margin: auto;
 }
@@ -31,4 +48,54 @@
     margin-bottom: 30px;
     align-content: center;
   }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  height: 60px;
+  position: relative;
+}
+
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f234f;
+  text-decoration: none;
+}
+
+.nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
 }
