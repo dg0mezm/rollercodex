@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import '../App.css';
 
 export default function Navbar() {
@@ -8,25 +9,25 @@ export default function Navbar() {
                 <div className='nav-elements'>
                     <ul>
                         <li>
-                            <a href="/">Inicio</a>
+                            <Link to="/">Inicio</Link>
                         </li>
                         <li>
-                            <a href="/miners">Mineros</a>
+                            <Link to="/miners">Mineros</Link>
                         </li>
                         <li>
-                            <a href="/users">Usuarios</a>
+                            <Link to="/users">Usuarios</Link>
                         </li>
                         <li>
-                            <a href="/how-to-use">Cómo usar</a>
+                            <Link to="/how-to-use">Cómo usar</Link>
                         </li>
                         <li>
-                            <a href="/calculator">Calculadora</a>
+                            <Link to="/calculator">Calculadora</Link>
                         </li>
                         <li>
-                            <a href="/contact">Contacto</a>
+                            <Link to="/contact">Contacto</Link>
                         </li>
                         <li>
-                            <a href="/faq">FAQ</a>
+                            <Link to="/faq">FAQ</Link>
                         </li>
                     </ul>
                 </div>

@@ -20,41 +20,49 @@ const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
+    children: [],
   },
   {
     path: "/miners",
     element: <Miners />,
+    children: [],
   },
   {
     path: "/users",
     element: <Users />,
+    children: [],
   },
   {
     path: "/how-to-use",
     element: <HowToUse />,
-  },
-  {
-    path: "/faq",
-    element: <Faq />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
+    children: [],
   },
   {
     path: "/calculator",
     element: <Calculator />,
+    children: [],
   },
   {
-    path: "/rgpd",
-    element: <Rgpd />,
+    path: "/contact",
+    element: <Contact />,
+    children: [],
   },
-])
+  {
+    path: "/faq",
+    element: <Faq />,
+    children: [],
+  },
+  {
+    path: "/rqpd",
+    element: <Rgpd />,
+    children: [],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 
