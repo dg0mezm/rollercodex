@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Miners from './pages/Miners';
 import Home from './pages/Home';
 import Users from './pages/Users';
@@ -14,7 +14,9 @@ import './index.css';
 import './static/fonts/ArcanaRegular.woff'
 import './static/fonts/Roboto.woff'
 
-const router = createBrowserRouter([
+
+
+const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
