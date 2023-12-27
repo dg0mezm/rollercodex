@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.bc51c08e.css",
-    "main.js": "/static/js/main.80d123e9.js",
-    "static/js/787.145916f0.chunk.js": "/static/js/787.145916f0.chunk.js",
-    "static/media/ArcanaRegular.woff": "/static/media/ArcanaRegular.24fcec922441f6e4839f.woff",
-    "static/media/Roboto.woff": "/static/media/Roboto.2d241905f5d9b81989af.woff",
-    "index.html": "/index.html",
-    "main.bc51c08e.css.map": "/static/css/main.bc51c08e.css.map",
-    "main.80d123e9.js.map": "/static/js/main.80d123e9.js.map",
-    "787.145916f0.chunk.js.map": "/static/js/787.145916f0.chunk.js.map"
+    "main.css": "./static/css/main.84906791.css",
+    "main.js": "./static/js/main.6489cbc6.js",
+    "static/js/787.145916f0.chunk.js": "./static/js/787.145916f0.chunk.js",
+    "static/media/ArcanaRegular.woff": "./static/media/ArcanaRegular.24fcec922441f6e4839f.woff",
+    "static/media/Roboto.woff": "./static/media/Roboto.2d241905f5d9b81989af.woff",
+    "index.html": "./index.html",
+    "main.84906791.css.map": "./static/css/main.84906791.css.map",
+    "main.6489cbc6.js.map": "./static/js/main.6489cbc6.js.map",
+    "787.145916f0.chunk.js.map": "./static/js/787.145916f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc51c08e.css",
-    "static/js/main.80d123e9.js"
+    "static/css/main.84906791.css",
+    "static/js/main.6489cbc6.js"
   ]
 }
