@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/rollercodex/static/css/main.dda5aae0.css",
-    "main.js": "/rollercodex/static/js/main.35bf2659.js",
-    "static/js/787.145916f0.chunk.js": "/rollercodex/static/js/787.145916f0.chunk.js",
-    "static/media/ArcanaRegular.woff": "/rollercodex/static/media/ArcanaRegular.24fcec922441f6e4839f.woff",
-    "static/media/Roboto.woff": "/rollercodex/static/media/Roboto.2d241905f5d9b81989af.woff",
-    "index.html": "/rollercodex/index.html",
-    "main.dda5aae0.css.map": "/rollercodex/static/css/main.dda5aae0.css.map",
-    "main.35bf2659.js.map": "/rollercodex/static/js/main.35bf2659.js.map",
-    "787.145916f0.chunk.js.map": "/rollercodex/static/js/787.145916f0.chunk.js.map"
+    "main.css": "/static/css/main.bc51c08e.css",
+    "main.js": "/static/js/main.f0256f20.js",
+    "static/js/787.145916f0.chunk.js": "/static/js/787.145916f0.chunk.js",
+    "static/media/ArcanaRegular.woff": "/static/media/ArcanaRegular.24fcec922441f6e4839f.woff",
+    "static/media/Roboto.woff": "/static/media/Roboto.2d241905f5d9b81989af.woff",
+    "index.html": "/index.html",
+    "main.bc51c08e.css.map": "/static/css/main.bc51c08e.css.map",
+    "main.f0256f20.js.map": "/static/js/main.f0256f20.js.map",
+    "787.145916f0.chunk.js.map": "/static/js/787.145916f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dda5aae0.css",
-    "static/js/main.35bf2659.js"
+    "static/css/main.bc51c08e.css",
+    "static/js/main.f0256f20.js"
   ]
 }
