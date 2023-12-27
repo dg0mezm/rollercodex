@@ -7,7 +7,7 @@ export default function HomeContent() {
              <br/>
              <div>Obtenemos los datos directamente del juego y calculamos qué minero es el más eficiente. Para ello, se tiene en cuenta el precio actual del minero, el poder y el bonus que nos ofrece. Con estos valores, podremos calcular cuanto poder y cuanto bonus obtenemos por cada RLT.</div>
              <br/>
-             <div>Continuaremos desarrollando Herramientas para centralizar y mejorar la toma de decisiones.</div>
+             <div>Continuaremos desarrollando herramientas para centralizar, mejorar la toma de decisiones dentro del juego y ayudarte a progresar dentro del juego más rápido.</div>
         </div>
        )
 }

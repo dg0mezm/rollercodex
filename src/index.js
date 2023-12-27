@@ -13,8 +13,7 @@ import Contact from './pages/Contact';
 import './index.css';
 import './static/fonts/ArcanaRegular.woff'
 import './static/fonts/Roboto.woff'
-
-
+import './static/fonts/visitor-webfont.woff'
 
 const router = createHashRouter([
   {
