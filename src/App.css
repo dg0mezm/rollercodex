@@ -1,12 +1,9 @@
-.Footer {
+.App {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  background-color: #2F3045;
-  height: 60px;
+  min-height: 100vh;
 }
 
-.Miners .Main, .Footer div {
-  width: 100%;
-  margin: auto;
+.content-container {
+  min-height: calc(100vh - 116px);
 }

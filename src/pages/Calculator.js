@@ -8,7 +8,7 @@ export default function Calculator() {
     <div className="App">
       <SessionStorageProvider>
         <Header />
-        <div>Calculator</div>
+        <div className='content-container'>Calculator</div>
         <Footer />
       </SessionStorageProvider>
     </div>

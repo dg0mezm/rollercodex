@@ -8,7 +8,7 @@ export default function HowToUse() {
     <div className="App">
       <SessionStorageProvider>
         <Header />
-        <div>How to use</div>
+        <div className='content-container'>How to use</div>
         <Footer />
       </SessionStorageProvider>
     </div>

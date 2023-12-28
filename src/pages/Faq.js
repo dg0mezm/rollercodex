@@ -8,7 +8,7 @@ export default function Faq() {
     <div className="App">
       <SessionStorageProvider>
         <Header />
-        <div>FAQ</div>
+        <div className='content-container'>FAQ</div>
         <Footer />
       </SessionStorageProvider>
     </div>

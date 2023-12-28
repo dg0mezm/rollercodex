@@ -9,7 +9,7 @@ export default function Home() {
     <div className="App">
       <SessionStorageProvider>
         <Header />
-        <HomeContent />
+        <HomeContent className='content-container'/>
         <Footer />
       </SessionStorageProvider>
     </div>

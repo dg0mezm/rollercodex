@@ -4,7 +4,7 @@ import { MaterialReactTable, useMaterialReactTable } from 'material-react-table'
 import { useSessionStorageContext } from './SessionStorageProvider';
 import axios from "axios";
 
-export default function Main() {
+export default function MinersContent() {
   const baseUrlRef = useRef("https://pre.dg0mezm.es/api/miners")
   const { inputValue } = useSessionStorageContext();
   const [miners, setMiners] = useState([]);
@@ -143,7 +143,7 @@ export default function Main() {
   if (!miners) return null;
 
   return (
-    <div className="Main">
+    <div className="Main content-container">
       <div className='InputProfile'>
         <input id='profileUrl' type='text' placeholder='Introduzca URL de perfil público...'></input>
         <button onClick={handleButton}>Enviar</button>

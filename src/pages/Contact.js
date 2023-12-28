@@ -8,7 +8,7 @@ export default function Contact() {
     <div className="App">
       <SessionStorageProvider>
         <Header />
-        <div>Contact</div>
+        <div className='content-container'>Contact</div>
         <Footer />
       </SessionStorageProvider>
     </div>
