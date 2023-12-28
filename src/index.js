@@ -10,6 +10,7 @@ import Faq from './pages/Faq';
 import Rgpd from './pages/Rgpd';
 import Calculator from './pages/Calculator';
 import Contact from './pages/Contact';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import './static/fonts/ArcanaRegular.woff'
 import './static/fonts/Roboto.woff'

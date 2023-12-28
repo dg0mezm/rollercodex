@@ -1,14 +1,10 @@
-import '../App.css';
-import Navbar from './Navbar';
+import '../static/styles/Header.css';
+import CustomNavbar from './CustomNavbar';
 
 export default function Header() {
-
   return (
     <div className="Header">
-        <div className="Logo">
-            <h1>RollerCodex</h1>
-        </div>
-        <Navbar />
+        <CustomNavbar />
     </div>
   );
 }

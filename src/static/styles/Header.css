@@ -1,0 +1,8 @@
+.Header {
+    background-color: #2F3045;
+}
+
+.Header .navbar a {
+    color: #fff !important;
+    text-decoration: none;
+}
