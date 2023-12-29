@@ -1,0 +1,60 @@
+.container .MuiPaper-root > .MuiBox-root {
+    background-color: #2F3045 !important;
+}
+
+.MuiPaper-root {
+    width: 100%;
+    border: 1px solid #888 !important;
+}
+
+.MuiPaper-root.MuiPopover-paper {
+    width: auto;
+}
+
+.MuiTableHead-root {
+    background-color: #2F3045 !important;
+    opacity: 1 !important;
+}
+
+.Mui-TableHeadCell-Content-Labels {
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.MuiBox-root {
+    opacity: 1 !important;
+}
+
+.MuiBox-root .MuiTablePagination-root, .MuiBox-root .MuiFormLabel-root, .MuiBox-root .MuiInputBase-root, .MuiBox-root .MuiSvgIcon-root{
+    color: white;
+}
+
+.MuiTableRow-head {
+    background-color: #2F3045 !important;
+    color: white;
+}
+
+.MuiTableRow-head svg.MuiSvgIcon-root {
+    color: white !important;
+}
+
+.MuiTableCell-body {
+    background-color: #353756 !important;
+    color: white !important;
+}
+
+.MuiTableCell-root {
+    border-bottom: 1px solid #525676 !important;
+}
+
+.MuiTableRow-head .MuiIconButton-root, .MuiTableRow-head .MuiTableSortLabel-root {
+    color: white !important;
+}
+
+.MuiBox-root .MuiCollapse-root .MuiInputBase-root {
+    background-color: white;
+}
+
+.MuiBox-root .MuiFormControl-root .MuiInputBase-root, .MuiBox-root .MuiFormControl-root .MuiSvgIcon-root {
+    color: black !important;
+}

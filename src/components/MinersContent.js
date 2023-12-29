@@ -1,8 +1,9 @@
-import '../App.css';
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 import { useSessionStorageContext } from './SessionStorageProvider';
+import { Button, Container, FormControl, InputGroup } from 'react-bootstrap';
 import axios from "axios";
+import '../static/styles/Miners.css'
 
 export default function MinersContent() {
   const baseUrlRef = useRef("https://pre.dg0mezm.es/api/miners")
@@ -30,7 +31,7 @@ export default function MinersContent() {
       {
         accessorKey: 'name',
         header: 'Nombre',
-        size: 50,
+        size: 100,
         muiTableHeadCellProps: {
           align: 'center',
         },
@@ -49,6 +50,7 @@ export default function MinersContent() {
         muiTableBodyCellProps: {
           align: 'center',
         },
+        enableGlobalFilter: false,
       },
       {
         accessorKey: 'power',
@@ -61,6 +63,7 @@ export default function MinersContent() {
         muiTableBodyCellProps: {
           align: 'center',
         },
+        enableGlobalFilter: false,
       },
       {
         accessorKey: 'bonus_percent',
@@ -73,6 +76,7 @@ export default function MinersContent() {
         muiTableBodyCellProps: {
           align: 'center',
         },
+        enableGlobalFilter: false,
       },
       {
         accessorKey: 'price',
@@ -85,6 +89,7 @@ export default function MinersContent() {
         muiTableBodyCellProps: {
           align: 'center',
         },
+        enableGlobalFilter: false,
       },
       {
         accessorKey: 'power_ratio',
@@ -97,6 +102,7 @@ export default function MinersContent() {
         muiTableBodyCellProps: {
           align: 'center',
         },
+        enableGlobalFilter: false,
       },
       {
         accessorKey: 'bonus_ratio',
@@ -109,6 +115,7 @@ export default function MinersContent() {
         muiTableBodyCellProps: {
           align: 'center',
         },
+        enableGlobalFilter: false,
       },
     ],
     [],
@@ -138,17 +145,32 @@ export default function MinersContent() {
     enableHiding: false,
     enableFullScreenToggle: false,
     columnFilterDisplayMode: 'popover',
-    enableColumnActions: false
+    enableColumnActions: false,
+    globalFilterFn: 'contains',
+    muiSearchTextFieldProps: {
+      InputProps: {
+        placeholder: 'Buscar minero...',
+      },
+    },
   });
   if (!miners) return null;
 
   return (
     <div className="content-container">
-      <div className='InputProfile'>
-        <input id='profileUrl' type='text' placeholder='Introduzca URL de perfil público...'></input>
-        <button onClick={handleButton}>Enviar</button>
-      </div>
-      <MaterialReactTable table={table} />
+      <Container className="d-flex flex-column align-items-center justify-content-center">
+        <InputGroup className="mb-3">
+          <FormControl id='profileUrl'
+            placeholder="Introduzca URL de perfil público..."
+            aria-label="Introduzca URL de perfil público..."
+            aria-describedby="basic-addon2"
+          />
+          <Button variant="primary" id="button-addon2" style={{ marginLeft: '10px' }} onClick={handleButton}>
+            Enviar
+          </Button>
+        </InputGroup>
+
+        <MaterialReactTable table={table} />
+      </Container>
     </div>
   );
 }

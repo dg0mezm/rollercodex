@@ -5,5 +5,6 @@
 }
 
 .content-container {
+  padding: 1rem 0 !important;
   min-height: calc(100vh - 116px);
 }
