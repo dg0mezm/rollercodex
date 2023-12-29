@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-import '../static/styles/Navbar.css'
 import { Container, Nav, Navbar } from "react-bootstrap";
+import '../static/styles/Navbar.css'
 
 export default function CustomNavbar() {
 
@@ -11,9 +11,11 @@ export default function CustomNavbar() {
                 <Navbar.Brand>
                     <Link to='/'>RollerCodex</Link>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ backgroundColor: 'gray' }}/>
+                <Navbar.Toggle aria-controls="basic-navbar-nav">
+                    <i class="bi bi-list"></i>
+                </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto" style={{ gap: '20px' }}>
+                    <Nav className="ms-auto">
                         <NavLink to='/miners'>Mineros</NavLink>
                         <NavLink to='/users'>Usuarios</NavLink>
                         <NavLink to='/how-to-use'>Cómo usar</NavLink>

@@ -143,7 +143,7 @@ export default function MinersContent() {
   if (!miners) return null;
 
   return (
-    <div className="Main content-container">
+    <div className="content-container">
       <div className='InputProfile'>
         <input id='profileUrl' type='text' placeholder='Introduzca URL de perfil público...'></input>
         <button onClick={handleButton}>Enviar</button>

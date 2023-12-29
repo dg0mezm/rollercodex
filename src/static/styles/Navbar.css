@@ -1,0 +1,17 @@
+.navbar-toggler i {
+    color: white;
+    font-size: 30px;
+}
+
+.navbar-nav {
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
