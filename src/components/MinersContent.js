@@ -124,12 +124,14 @@ export default function MinersContent() {
 
   const formattedData = useMemo(() => {
     return miners.map((miner) => {
+      let bonus_ratio = miner.bonus_percent > 0 && miner.price > 0 ? miner.bonus_percent / miner.price : 0;
+      let power_ratio = miner.price > 0 ? miner.power / miner.price : 0;
       return {
         ...miner,
         level: (miner.level + 1),
         bonus_percent: (miner.bonus_percent * 100).toFixed(2) + '%',
-        bonus_ratio: (miner.bonus_ratio * 100).toFixed(5) + '%',
-        power_ratio: (miner.power_ratio).toFixed(2),
+        bonus_ratio: (bonus_ratio * 100).toFixed(5) + '%',
+        power_ratio: (power_ratio).toFixed(2),
       };
     });
   }, [miners]);

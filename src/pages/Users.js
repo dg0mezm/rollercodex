@@ -3,14 +3,14 @@ import '../static/styles/Users.css'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { SessionStorageProvider } from '../components/SessionStorageProvider';
-import WIP from '../components/WIP';
+import UserContent from '../components/UserContent';
 
 export default function Users() {
   return (
     <div className="App">
       <SessionStorageProvider>
         <Header />
-        <WIP />
+        <UserContent />
         <Footer />
       </SessionStorageProvider>
     </div>
