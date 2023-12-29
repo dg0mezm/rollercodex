@@ -10,7 +10,7 @@ export default function UserContent() {
         try {
             const response = await fetch(`https://pre.dg0mezm.es/api/users/${userId}`);
             const data = await response.json();
-            setUserData(data);
+            data.user[0] ? setUserData(data.user[0]) : setUserData(null);
         } catch (error) {
             console.error("Error al obtener datos del usuario:", error);
         }
@@ -42,10 +42,11 @@ export default function UserContent() {
 
     const refreshMiners = async () => {
         if (userData) {
-            const userId = userData.user[0].public_profile_link;
+            const userId = userData.public_profile_link;
             try {
                 const response = await fetch(`https://pre.dg0mezm.es/api/users/${userId}/refresh/miners`);
-                await response.json();
+                const data = await response.json();
+                data.data[0] ? setUserData(data.data[0]) : setUserData(null);
             } catch (error) {
                 console.error("Error al obtener datos del usuario:", error);
             }
@@ -72,24 +73,23 @@ export default function UserContent() {
                 </Col>
             </Row>
             {userData && (
-                <Row className="justify-content-center col-12 m-auto">
-                    <Col>
-                        <Row>
-                            <div>Imagen</div>
-                        </Row>
-                        <Row>
-                            <Col className="align-items-center gap-2 justify-content-center">
-                                <div>Nombre: {userData.user[0].fullname}</div>
-                                <div>Género: {userData.user[0].sex.toUpperCase() === 'MALE' ? "Hombre" : "Mujer"}</div>
-                                <div>Fecha de registro: {getDateFormatted(userData.user[0].register_since_time)}</div>
-                                <div>Última actualización: {getCompleteDateFormatted(userData.user[0].last_refresh_user_info)}</div>
-                                <div>Última actualización de mineros: {getCompleteDateFormatted(userData.user[0].last_refresh_owned_miners)}</div>
+                <Row className="justify-content-center col-12 m-auto col-md-10 col-lg-6">
+                    <Col className="user-info d-flex gap-4 m-3 p-2 border rounded">
+                        <Row className="d-flex">
+                            <Col className="col-12">
+                                <div>Nombre: {userData.fullname}</div>
+                                <div>Género: {userData.sex.toUpperCase() === 'MALE' ? "Hombre" : "Mujer"}</div>
+                                <div>Fecha de registro: {getDateFormatted(userData.register_since_time)}</div>
+                                <div>Última actualización: {getCompleteDateFormatted(userData.last_refresh_user_info)}</div>
+                                <div>Última actualización de mineros: {getCompleteDateFormatted(userData.last_refresh_owned_miners)}</div>
                             </Col>
-                        </Row>
-                        <Row>
-                            <Col className="d-flex align-items-center gap-2 justify-content-center">
-                                <Button className="" onClick={refreshMiners}>Actualizar Mineros</Button>
-                                <Button className="">Actualizar Información</Button>
+                            <Col>
+                                <Row className="mt-2">
+                                    <Col className="d-flex align-items-center gap-2 justify-content-center">
+                                        <Button className="p-1" onClick={refreshMiners}>Actualizar Mineros</Button>
+                                        <Button className="p-1">Actualizar Información</Button>
+                                    </Col>
+                                </Row>
                             </Col>
                         </Row>
                     </Col>
