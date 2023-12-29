@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect, useRef } from 'react';
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 import { useSessionStorageContext } from './SessionStorageProvider';
 import { Button, Container, FormControl, InputGroup } from 'react-bootstrap';
+import { MRT_Localization_ES } from 'material-react-table/locales/es';
 import axios from "axios";
 import '../static/styles/Miners.css'
 
@@ -147,11 +148,7 @@ export default function MinersContent() {
     columnFilterDisplayMode: 'popover',
     enableColumnActions: false,
     globalFilterFn: 'contains',
-    muiSearchTextFieldProps: {
-      InputProps: {
-        placeholder: 'Buscar minero...',
-      },
-    },
+    localization: MRT_Localization_ES
   });
   if (!miners) return null;
 
