@@ -12,7 +12,7 @@ export default function CustomNavbar() {
                     <Link to='/'>RollerCodex</Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
-                    <i class="bi bi-list"></i>
+                    <i className="bi bi-list"></i>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
