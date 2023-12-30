@@ -1,18 +1,27 @@
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 import { useSessionStorageContext } from './SessionStorageProvider';
-import { Button, Container, FormControl, InputGroup } from 'react-bootstrap';
+import { Button, Col, Container, FormControl, InputGroup, Row } from 'react-bootstrap';
 import { MRT_Localization_ES } from 'material-react-table/locales/es';
 import axios from "axios";
 import '../static/styles/Miners.css'
 
 export default function MinersContent() {
-  const baseUrlRef = useRef("https://pre.dg0mezm.es/api/miners")
-  const { inputValue } = useSessionStorageContext();
   const [miners, setMiners] = useState([]);
+  const [userStats, setUserStats] = useState(null)
+  const baseUrlRef = useRef("https://pre.dg0mezm.es/api/miners")
+  const statsUrlRef = useRef()
+  const { inputValue } = useSessionStorageContext();
   const { saveToSessionStorage } = useSessionStorageContext();
 
   useEffect(() => {
+    if (inputValue) {
+      statsUrlRef.current = `https://pre.dg0mezm.es/api/users/${inputValue}/stats`
+      axios.get(statsUrlRef.current).then((response) => {
+        response.data.stats[0] ? setUserStats(response.data.stats) : setUserStats(null);
+      });
+    }
+
     if (inputValue) {
       baseUrlRef.current = `https://pre.dg0mezm.es/api/users/${inputValue}/miners/left`
     } else {
@@ -21,6 +30,7 @@ export default function MinersContent() {
     axios.get(baseUrlRef.current).then((response) => {
       setMiners(response.data.miners);
     });
+    
   }, [inputValue]);
 
   const handleButton = (e) => {
@@ -126,6 +136,16 @@ export default function MinersContent() {
     return miners.map((miner) => {
       let bonus_ratio = miner.bonus_percent > 0 && miner.price > 0 ? miner.bonus_percent / miner.price : 0;
       let power_ratio = miner.price > 0 ? miner.power / miner.price : 0;
+      
+      if (userStats) {
+        let power = userStats[0].games + userStats[0].miners;
+        let power_from_miner_bonus_to_miner_power = miner.bonus_percent > 0 ? (miner.power * miner.bonus_percent) : 0;
+        let power_from_miner_bonus_to_user_power = miner.bonus_percent > 0 ? (miner.bonus_percent * power) : 0;
+        let power_from_user_bonus_to_miner_power = userStats[0].bonus_percent > 0 ? (miner.power * (userStats[0].bonus_percent / 10000)) : 0;
+
+        power_ratio = miner.price > 0 ? (power_from_miner_bonus_to_miner_power + power_from_miner_bonus_to_user_power + power_from_user_bonus_to_miner_power + miner.power) / miner.price : 0;
+      }
+
       return {
         ...miner,
         level: (miner.level + 1),
@@ -134,7 +154,7 @@ export default function MinersContent() {
         power_ratio: (power_ratio).toFixed(2),
       };
     });
-  }, [miners]);
+  }, [miners, userStats]);
 
   const table = useMaterialReactTable({
     columns,
@@ -168,6 +188,13 @@ export default function MinersContent() {
           </Button>
         </InputGroup>
 
+        {userStats && (
+          <Row className='d-flex flex-column flex-sm-row align-items-center justify-content-center col-12 col-md-8 col-lg-6 col-xl-4 mb-3 gap-3'>
+            <Col className='text-center p-2 rounded' style={{ backgroundColor: '#2F3045'}}>Power: {(userStats[0].games + userStats[0].miners) + ' GH/s'}</Col>
+            <Col className='text-center p-2 rounded' style={{ backgroundColor: '#2F3045'}}>Bonus: {(userStats[0].bonus_percent > 0 ? userStats[0].bonus_percent / 10000: 0.00) + '%'}</Col>
+          </Row>
+        )}
+        
         <MaterialReactTable table={table} />
       </Container>
     </div>
