@@ -75,7 +75,7 @@ export default function UserContent() {
                     console.error("Error al obtener datos del usuario:", error);
                 }
             } else {
-                alert('ATENCIÓN: Solo se puede refrescar una vez cada 15 minutos.')
+                alert('ATENCIÓN: Solo se puede refrescar una vez cada 24 horas.')
             }
         }
     }
