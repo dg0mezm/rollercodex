@@ -189,7 +189,7 @@ export default function MinersContent() {
         {userStats && (
           <Row className='d-flex flex-column flex-sm-row align-items-center justify-content-center col-12 col-md-10 col-lg-8 col-xl-6 mb-3 gap-3'>
             <Col className='text-center p-2 rounded' style={{ backgroundColor: '#2F3045'}}>Power: {(userStats[0].games + userStats[0].miners) + ' GH/s'}</Col>
-            <Col className='text-center p-2 rounded' style={{ backgroundColor: '#2F3045'}}>Bonus: {(userStats[0].bonus_percent > 0 ? userStats[0].bonus_percent / 10000: 0.00) + '%'}</Col>
+            <Col className='text-center p-2 rounded' style={{ backgroundColor: '#2F3045'}}>Bonus: {(userStats[0].bonus_percent > 0 ? userStats[0].bonus_percent / 100: 0.00) + '%'}</Col>
           </Row>
         )}
         
