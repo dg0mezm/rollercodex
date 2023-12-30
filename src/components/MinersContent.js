@@ -19,6 +19,8 @@ export default function MinersContent() {
       axios.get(statsUrlRef.current).then((response) => {
         response.data.stats[0] ? setUserStats(response.data.stats) : setUserStats(null);
       });
+    } else {
+      setUserStats(null)
     }
 
     if (inputValue) {
