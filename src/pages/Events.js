@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import { SessionStorageProvider } from '../components/SessionStorageProvider';
 import WIP from '../components/WIP';
 
-export default function HowToUse() {
+export default function Events() {
   return (
     <div className="App">
       <SessionStorageProvider>
