@@ -174,7 +174,7 @@ export default function MinersContent() {
 
   return (
     <div className="content-container">
-      <Container className="d-flex flex-column align-items-center justify-content-center col-12 col-lg-8">
+      <Container className="d-flex flex-column align-items-center justify-content-center col-12 col-lg-10">
         <InputGroup className="mb-3">
           <FormControl id='profileUrl'
             placeholder="Insert your Profile Link..."
