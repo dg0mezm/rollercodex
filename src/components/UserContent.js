@@ -94,7 +94,7 @@ export default function UserContent() {
                             />
                         </Form.Group>
                         <Button variant="primary" type="submit">
-                            Enviar
+                            Send
                         </Button>
                     </Form>
                 </Col>

@@ -182,7 +182,7 @@ export default function MinersContent() {
             aria-describedby="basic-addon2"
           />
           <Button variant="primary" id="button-addon2" style={{ marginLeft: '10px' }} onClick={handleButton}>
-            Enviar
+            Send
           </Button>
         </InputGroup>
 
