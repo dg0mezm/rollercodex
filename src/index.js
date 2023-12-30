@@ -5,7 +5,7 @@ import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Miners from './pages/Miners';
 import Home from './pages/Home';
 import Users from './pages/Users';
-import HowToUse from './pages/HowToUse';
+import Events from './pages/Events';
 import Faq from './pages/Faq';
 import Rgpd from './pages/Rgpd';
 import Calculator from './pages/Calculator';
@@ -33,8 +33,8 @@ const router = createHashRouter([
     children: [],
   },
   {
-    path: "/how-to-use",
-    element: <HowToUse />,
+    path: "/events",
+    element: <Events />,
     children: [],
   },
   {
