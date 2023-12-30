@@ -2,7 +2,6 @@ import { useMemo, useState, useEffect, useRef } from 'react';
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 import { useSessionStorageContext } from './SessionStorageProvider';
 import { Button, Col, Container, FormControl, InputGroup, Row } from 'react-bootstrap';
-import { MRT_Localization_ES } from 'material-react-table/locales/es';
 import axios from "axios";
 import '../static/styles/Miners.css'
 
@@ -41,7 +40,7 @@ export default function MinersContent() {
     () => [
       {
         accessorKey: 'name',
-        header: 'Nombre',
+        header: 'Name',
         size: 100,
         muiTableHeadCellProps: {
           align: 'center',
@@ -52,7 +51,7 @@ export default function MinersContent() {
       },
       {
         accessorKey: 'level',
-        header: 'Nivel',
+        header: 'Level',
         filterVariant: 'range',
         size: 20,
         muiTableHeadCellProps: {
@@ -170,17 +169,16 @@ export default function MinersContent() {
     columnFilterDisplayMode: 'popover',
     enableColumnActions: false,
     globalFilterFn: 'contains',
-    localization: MRT_Localization_ES
   });
   if (!miners) return null;
 
   return (
     <div className="content-container">
-      <Container className="d-flex flex-column align-items-center justify-content-center">
+      <Container className="d-flex flex-column align-items-center justify-content-center col-12 col-lg-8">
         <InputGroup className="mb-3">
           <FormControl id='profileUrl'
-            placeholder="Introduzca URL de perfil público..."
-            aria-label="Introduzca URL de perfil público..."
+            placeholder="Insert your Profile Link..."
+            aria-label="Insert your Profile Link..."
             aria-describedby="basic-addon2"
           />
           <Button variant="primary" id="button-addon2" style={{ marginLeft: '10px' }} onClick={handleButton}>
@@ -189,7 +187,7 @@ export default function MinersContent() {
         </InputGroup>
 
         {userStats && (
-          <Row className='d-flex flex-column flex-sm-row align-items-center justify-content-center col-12 col-md-8 col-lg-6 col-xl-4 mb-3 gap-3'>
+          <Row className='d-flex flex-column flex-sm-row align-items-center justify-content-center col-12 col-md-10 col-lg-8 col-xl-6 mb-3 gap-3'>
             <Col className='text-center p-2 rounded' style={{ backgroundColor: '#2F3045'}}>Power: {(userStats[0].games + userStats[0].miners) + ' GH/s'}</Col>
             <Col className='text-center p-2 rounded' style={{ backgroundColor: '#2F3045'}}>Bonus: {(userStats[0].bonus_percent > 0 ? userStats[0].bonus_percent / 10000: 0.00) + '%'}</Col>
           </Row>

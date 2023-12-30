@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, Col, Container, Row, Form } from "react-bootstrap";
 
 const hasPassed15Minutes = (lastRefresh) => {
-    const fifteenMinutesInMillis = 15 * 60 * 1000; // 15 minutos en milisegundos
+    const fifteenMinutesInMillis = 15 * 60 * 1000;
     const now = new Date().getTime();
     const lastRefreshTime = new Date(lastRefresh).getTime();
 
@@ -59,7 +59,7 @@ export default function UserContent() {
                     console.error("Error al obtener datos del usuario:", error);
                 }
             } else {
-                alert('ATENCIÓN: Solo se puede refrescar una vez cada 15 minutos.')
+                alert('ATENTION: It can only be refreshed once every 15 minutes.')
             }
         }
     }
@@ -75,7 +75,7 @@ export default function UserContent() {
                     console.error("Error al obtener datos del usuario:", error);
                 }
             } else {
-                alert('ATENCIÓN: Solo se puede refrescar una vez cada 15 minutos.')
+                alert('ATENTION: It can only be refreshed once every 15 minutes.')
             }
         }
     }
@@ -88,7 +88,7 @@ export default function UserContent() {
                         <Form.Group className="w-100">
                             <Form.Control
                                 type="text"
-                                placeholder="Introduce URL de perfil público..."
+                                placeholder="Insert your Profile Link..."
                                 value={userId}
                                 onChange={(e) => setUserId(e.target.value)}
                             />
@@ -104,18 +104,18 @@ export default function UserContent() {
                     <Col className="user-info d-flex gap-4 m-3 p-2 border rounded">
                         <Row className="d-flex">
                             <Col className="col-12">
-                                <div>Nombre: {userData.fullname}</div>
-                                <div>Género: {userData.sex.toUpperCase() === 'MALE' ? "Hombre" : "Mujer"}</div>
-                                <div>Poder: {userData.power}</div>
-                                <div>Fecha de registro: {getDateFormatted(userData.register_since_time)}</div>
-                                <div>Última actualización: {getCompleteDateFormatted(userData.last_refresh_user_info)}</div>
-                                <div>Última actualización de mineros: {getCompleteDateFormatted(userData.last_refresh_owned_miners)}</div>
+                                <div>Name: {userData.fullname}</div>
+                                <div>Sex: {userData.sex.toUpperCase()}</div>
+                                <div>Power: {userData.power}</div>
+                                <div>Registration date: {getDateFormatted(userData.register_since_time)}</div>
+                                <div>Last Information Update: {getCompleteDateFormatted(userData.last_refresh_user_info)}</div>
+                                <div>Last Owned Miners Update: {getCompleteDateFormatted(userData.last_refresh_owned_miners)}</div>
                             </Col>
                             <Col>
                                 <Row className="mt-2">
                                     <Col className="d-flex align-items-center gap-2 justify-content-center">
-                                        <Button className="p-1" onClick={refreshMiners}>Actualizar Mineros</Button>
-                                        <Button className="p-1" onClick={refreshUserInfo}>Actualizar Información</Button>
+                                        <Button className="p-1" onClick={refreshUserInfo}>Refresh Information</Button>
+                                        <Button className="p-1" onClick={refreshMiners}>Refresh Miners</Button>
                                     </Col>
                                 </Row>
                             </Col>

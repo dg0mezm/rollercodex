@@ -16,11 +16,11 @@ export default function CustomNavbar() {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <NavLink to='/miners'>Mineros</NavLink>
-                        <NavLink to='/users'>Usuarios</NavLink>
-                        <NavLink to='/how-to-use'>Cómo usar</NavLink>
-                        <NavLink to='/calculator'>Calculadora</NavLink>
-                        <NavLink to='/contact'>Contacto</NavLink>
+                        <NavLink to='/miners'>Miners</NavLink>
+                        <NavLink to='/users'>Users</NavLink>
+                        <NavLink to='/how-to-use'>How to Use</NavLink>
+                        <NavLink to='/calculator'>Calculator</NavLink>
+                        <NavLink to='/contact'>Contact</NavLink>
                         <NavLink to='/faq'>FAQ</NavLink>
                     </Nav>
                 </Navbar.Collapse>
