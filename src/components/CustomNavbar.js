@@ -18,6 +18,7 @@ export default function CustomNavbar() {
                     <Nav className="ms-auto">
                         <NavLink to='/miners'>Miners</NavLink>
                         <NavLink to='/users'>Users</NavLink>
+                        <NavLink to='/merges'>Merges</NavLink>
                         <NavLink to='/events'>Events</NavLink>
                         <NavLink to='/calculator'>Calculator</NavLink>
                         <NavLink to='/contact'>Contact</NavLink>
