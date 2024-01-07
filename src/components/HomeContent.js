@@ -3,11 +3,11 @@ import '../static/styles/Home.css'
 export default function HomeContent() {
     return (
         <div className="HomeContainer">
-             <div>Herramienta para ayudar a tomar las mejores decisiones en el juego <a href="https://rollercoin.com/?r=kpyg6ujy" target="_blank" rel="noreferrer">Rollercoin</a>.</div>
+             <div>Tools to help you improve the decisions you made in the game <a href="https://rollercoin.com/?r=kpyg6ujy" target="_blank" rel="noreferrer">Rollercoin</a>.</div>
              <br/>
-             <div>Obtenemos los datos directamente del juego y calculamos qué minero es el más eficiente. Para ello, se tiene en cuenta el precio actual del minero, el poder y el bonus que nos ofrece. Con estos valores, podremos calcular cuanto poder y cuanto bonus obtenemos por cada RLT.</div>
+             <div>Data are obtained directly from the game to calculate which miner has the best performance. To do this, we use the actual price of the miner, his power and his bonus. With this data, we can calculate how much power and bonus the miner gives us for each RLT if we buy it.</div>
              <br/>
-             <div>Continuaremos desarrollando herramientas para centralizar, mejorar la toma de decisiones dentro del juego y ayudarte a progresar dentro del juego más rápido.</div>
+             <div>We are in continuosly development of tools to centralize the information and help you all to take better decisions ingame to arrive your objetives faster than anyone.</div>
         </div>
        )
 }
