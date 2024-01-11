@@ -21,7 +21,7 @@ export default function CustomNavbar() {
                         <NavLink to='/merges'>Merges</NavLink>
                         <NavLink to='/events'>Events</NavLink>
                         <NavLink to='/calculator'>Calculator</NavLink>
-                        <NavLink to='/contact'>Contact</NavLink>
+                        <NavLink to='/simulator'>Simulator</NavLink>
                         <NavLink to='/faq'>FAQ</NavLink>
                     </Nav>
                 </Navbar.Collapse>

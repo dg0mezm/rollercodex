@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import { SessionStorageProvider } from '../components/SessionStorageProvider';
 import WIP from '../components/WIP';
 
-export default function Contact() {
+export default function Simulator() {
   return (
     <div className="App">
       <SessionStorageProvider>
