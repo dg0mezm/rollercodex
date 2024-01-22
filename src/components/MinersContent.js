@@ -24,7 +24,7 @@ export default function MinersContent() {
     }
 
     if (inputValue) {
-      baseUrlRef.current = `https://pre.dg0mezm.es/api/users/${inputValue}/miners/left`
+      baseUrlRef.current = `https://pre.dg0mezm.es/api/users/${inputValue}/miners`
     } else {
       baseUrlRef.current = "https://pre.dg0mezm.es/api/miners"
     }
@@ -129,6 +129,18 @@ export default function MinersContent() {
         },
         enableGlobalFilter: false,
       },
+      {
+        accessorKey: 'user_owned',
+        header: 'Owned',
+        size: 50,
+        muiTableHeadCellProps: {
+          align: 'center',
+        },
+        muiTableBodyCellProps: {
+          align: 'center',
+        },
+        enableGlobalFilter: false,
+      },
     ],
     [],
   );
@@ -153,6 +165,7 @@ export default function MinersContent() {
         bonus_percent: (miner.bonus_percent * 100).toFixed(2) + '%',
         bonus_ratio: (bonus_ratio * 100).toFixed(5) + '%',
         power_ratio: (power_ratio).toFixed(2),
+        user_owned: miner.user_owned ? true.toString() : false.toString(),
       };
     });
   }, [miners, userStats]);
